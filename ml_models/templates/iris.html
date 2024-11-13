@@ -1,0 +1,23 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iris Classification</title>
+</head>
+<body>
+    <h1>Submit your details</h1>
+    <form method="post">
+        {% csrf_token %}
+        <label for="seplen">Sepal Length:</label>
+        <input type="number" id="seplen" name="seplen"><br><br>
+        <label for="sepwid">Sepal Width:</label>
+        <input type="number" id="sepwid" name="sepwid"><br><br>
+        <label for="petlen">Petal Length:</label>
+        <input type="number" id="petlen" name="petlen"><br><br>
+        <label for="petwid">Petal Width:</label>
+        <input type="number" id="petwid" name="petwid"><br><br>
+        <button type="submit">Submit</button>
+    </form>
+    <p>{{output}}</p>
+</body>
+</html>
