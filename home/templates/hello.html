@@ -1,12 +1,27 @@
-<div>
-    <h2 style="text-align:center;"> Welcome </h2>
-    {% if name %}
-    <h3>Hello, {{name}}!</h3>
-    {% else %}
-    <h3>Hello, visiter!</h3>
-    {% endif %}
-    <ul>
-        <li><a href="models/iris">Iris Classification</a></li>
-        <li><a href="models/score">Score Prediction</a></li>
-    </ul>
-</div>
+{% load static %}
+
+<html>
+
+<head>
+    <title>Home Page</title>
+    <link rel="stylesheet" href="{% static 'home/style.css' %}">
+</head>
+
+<body>
+    <div id="heading">
+        <h1 class="heading">Welcome</h1>
+    </div>
+    <div id="body">
+        {% if name %}
+        <h3>Hello, {{name}}!</h3>
+        {% else %}
+        <h3>Hello visiter</h3>
+        {% endif %}
+        <ul>
+            <li><a href="models/iris">Iris Classification</a></li>
+            <li><a href="models/score">Score Prediction</a></li>
+        </ul>
+    </div>
+</body>
+
+</html>
