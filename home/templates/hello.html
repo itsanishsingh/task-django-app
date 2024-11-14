@@ -1,8 +1,12 @@
-<div style="background:#025246 ;padding:10px">
-    <h2 style="color:white;text-align:center;"> Welcome </h2>
+<div>
+    <h2 style="text-align:center;"> Welcome </h2>
     {% if name %}
     <h3>Hello, {{name}}!</h3>
     {% else %}
     <h3>Hello, visiter!</h3>
     {% endif %}
+    <ul>
+        <li><a href="models/iris">Iris Classification</a></li>
+        <li><a href="models/score">Score Prediction</a></li>
+    </ul>
 </div>
