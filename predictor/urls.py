@@ -21,4 +21,5 @@ from django.urls import path, include
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("models/", include("ml_models.urls")),
+    path("", include("home.urls")),
 ]

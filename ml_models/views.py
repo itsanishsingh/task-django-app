@@ -8,10 +8,6 @@ regression_model = joblib.load("ml_models/regression_model.joblib")
 
 
 # Create your views here.
-def say_hello(request):
-    return render(request, "hello.html", {"name": "Anish"})
-
-
 def classification_function(request):
     if request.method == "POST":
         seplen = float(request.POST.get("seplen"))
