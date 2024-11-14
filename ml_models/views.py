@@ -4,6 +4,7 @@ import joblib
 import numpy as np
 
 classification_model = joblib.load("ml_models/classification_model.joblib")
+regression_model = joblib.load("ml_models/regression_model.joblib")
 
 
 # Create your views here.
@@ -33,6 +34,17 @@ def classification_function(request):
 
 
 def regression_function(request):
-    if request.method == "Post":
-        return HttpResponse("Will implement later")
-    return HttpResponse("Hello")
+    if request.method == "POST":
+        hours = float(request.POST.get("hours"))
+        prev_score = float(request.POST.get("prev_score"))
+
+        input_data = np.array([[hours, prev_score]])
+
+        output = regression_model.predict(input_data)
+        result = str(output[0])
+
+        result = {"output": f"The score would be {result}"}
+
+        return render(request, "score.html", result)
+
+    return render(request, "score.html")
