@@ -1,12 +1,16 @@
 body {
-    background-color: silver;
+    background-color: #4a4a4a;
 }
 
 #heading {
     text-align: center;
-    color: black;
+    color: white;
 }
 
-#body {
-    color: black;
+#main-body {
+    color: white;
+}
+
+#main-body a {
+    color: white;
 }
